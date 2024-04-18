@@ -12,6 +12,7 @@ const Hero = () => {
       id="hero"
       className="w-full flex xl:flex-row flex-col justify-center min-h-screen gap-10 max-container"
     >
+      {/* text */}
       <div className="relative xl:w-2/5 flex flex-col justify-center items-start w-full max-xl:padding-x pt-28">
         <p className="text-xl font-montserrat text-coral-red">
           Our Summer Collection
@@ -29,6 +30,7 @@ const Hero = () => {
         </p>
         <Button label="Shop Now" iconURL={arrowRight} />
 
+        {/* stat */}
         <div className="flex justify-start items-start flex-wrap w-full mt-20 gap-16">
           {statistics.map((stat) => (
             <div key={stat.label}>
@@ -40,6 +42,8 @@ const Hero = () => {
           ))}
         </div>
       </div>
+
+      {/* image */}
       <div className="relative flex flex-1 justify-center items-center xl:min-h-screen max-xl:py-40 bg-primary bg-hero bg-cover bg-center">
         <img
           src={bigShoeImg}
@@ -48,7 +52,7 @@ const Hero = () => {
           height={500}
           className="object-contain relative z-10"
         />
-
+        {/* cards */}
         <div className="flex sm:gap-6 gap-4 absolute -bottom-[5%] sm:left-[10%] max-sm:px-6">
           {shoes.map((shoe) => (
             <div key={shoe}>
