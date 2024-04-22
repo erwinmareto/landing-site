@@ -1,5 +1,6 @@
 const Button = ({
   label,
+  link,
   iconURL,
   backgroundColor,
   borderColor,
@@ -18,7 +19,7 @@ const Button = ({
       } transition hover:scale-105 hover:opacity-85 active:scale-95
      `}
     >
-      {label}
+      <a href={link}>{label}</a>
       {iconURL && (
         <img
           src={iconURL}

@@ -1,18 +1,17 @@
-import { copyrightSign } from "../assets/icons";
-import { footerLogo } from "../assets/images";
+import { attLogo } from "../assets/images";
 import { footerLinks, socialMedia } from "../constants";
 
 const Footer = () => {
   return (
-    <footer className="max-container">
+    <footer className="max-container text-black dark:text-white">
       {/* main part */}
       <div className="flex justify-between items-start gap-20 flex-wrap max-lg:flex-col">
         {/* logo */}
         <div className="flex flex-col items-start">
           <a href="/">
-            <img src={footerLogo} width={150} height={46} />
+            <img src={attLogo} width={150} height={46} />
           </a>
-          <p className="mt-6 text-base leading-7 font-montserrat text-white-400 sm:max-w-sm">
+          <p className="mt-6 text-base leading-7 font-montserrat sm:max-w-sm">
             Get shoes for the new term at your nearest Nike store. Find Your
             perfect Size in Store. Get Rewards
           </p>
@@ -21,7 +20,7 @@ const Footer = () => {
             {socialMedia.map((icon) => (
               <div
                 key={icon.alt}
-                className="flex justify-center items-center w-12 h-12 bg-white rounded-full"
+                className="flex justify-center items-center w-12 h-12 rounded-full cursor-pointer"
               >
                 <img src={icon.src} alt={icon.alt} width={24} height={24} />
               </div>
@@ -34,7 +33,7 @@ const Footer = () => {
           {footerLinks.map((section) => (
             // new section
             <div key={section}>
-              <h4 className="text-white font-montserrat text-2xl leading-normal font-medium mb-6">
+              <h4 className="font-montserrat text-2xl leading-normal font-medium mb-6">
                 {section.title}
               </h4>
               {/* links */}
@@ -42,7 +41,7 @@ const Footer = () => {
                 {section.links.map((link) => (
                   <li
                     key={link.name}
-                    className="mt-3 text-white-400 font-montserrat text-base leading-normal hover:text-slate-gray cursor-pointer"
+                    className="mt-3 font-montserrat text-base leading-normal hover:text-slate-gray cursor-pointer"
                   >
                     <a>{link.name}</a>
                   </li>
@@ -54,17 +53,17 @@ const Footer = () => {
       </div>
 
       {/* copyright */}
-      <div className="flex justify-between text-white-400 mt-24 max-sm:flex-col max-sm:items-center">
+      <div className="flex justify-between mt-24 max-sm:flex-col max-sm:items-center">
         <div className="flex flex-1 justify-start items-center gap-2 font-montserrat cursor-pointer">
-          <img
+          {/* <img
             src={copyrightSign}
             alt="copyight"
             width={20}
             height={20}
             className="rounded-full m-0"
-          />
-          {/* <p>&copy; Copyright. All rights reserved.</p> */}
-          <p>Copyright. All rights reserved.</p>
+          /> */}
+          <p>&copy; Copyright. All rights reserved.</p>
+          {/* <p>Copyright. All rights reserved.</p> */}
           <p className="font-montserrat cursor-pointer">Terms & Conditions</p>
         </div>
       </div>
